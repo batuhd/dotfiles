@@ -1,0 +1,74 @@
+{
+
+"custom/hint": {
+	"format": "?",
+	"on-click": "$HOME/.config/hypr/scripts/KeyHints.sh",
+	"on-click-right": "$HOME/.config/hypr/scripts/KeyBinds.sh",
+	"tooltip": true,
+	"tooltip-format": "Left Click: Quick Tips\nRight Click: Keybinds"
+},
+
+"custom/cava_mviz": {
+	"exec": "$HOME/.config/hypr/scripts/WaybarCava.sh",
+	"format": "{}"
+},
+
+"custom/playerctl": {
+	"format": "<span>{}</span>",
+	"return-type": "json",
+	"max-length": 25,
+	"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}}  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+	"on-click-middle": "playerctl play-pause",
+	"on-click": "playerctl previous",
+	"on-click-right": "playerctl next",
+	"scroll-step": 5.0,
+	"on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --inc",
+	"on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --dec",
+	"smooth-scrolling-threshold": 1
+},
+    
+
+"custom/swaync": {
+	"tooltip": true,
+	"tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+	"format": "{} {icon} ",
+	"format-icons": {
+		"notification": "<span foreground='red'><sup></sup></span>",
+		"none": "",
+		"dnd-notification": "<span foreground='red'><sup></sup></span>",
+		"dnd-none": "",
+		"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+		"inhibited-none": "",
+		"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+		"dnd-inhibited-none": ""
+	},
+	"return-type": "json",
+	"exec-if": "which swaync-client",
+	"exec": "swaync-client -swb",
+	"on-click": "sleep 0.1 && swaync-client -t -sw",
+	"on-click-right": "swaync-client -d -sw",
+	"escape": true
+},
+
+
+"custom/separator#dot-line": {
+	"format": "",
+	"interval": "once",
+	"tooltip": false
+},
+"custom/separator#line": {
+	"format": "|",
+	"interval": "once",
+	"tooltip": false
+},
+"custom/separator#blank": {
+	"format": "",
+	"interval": "once",
+	"tooltip": false
+},
+"custom/separator#blank_2": {
+	"format": "  ",
+	"interval": "once",
+	"tooltip": false
+}
+}
