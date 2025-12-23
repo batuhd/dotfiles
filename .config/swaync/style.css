@@ -1,0 +1,9 @@
+.notification-row {
+    transition: all 0s;
+    outline: none;
+}
+
+.notification {
+    transition: all 0s;
+}
+

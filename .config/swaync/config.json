@@ -1,0 +1,27 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-width": 300,
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
+  "timeout": 1,
+  "timeout-low": 1,
+  "timeout-critical": 0,
+  "widgets": [
+    "title",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Temizle"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    }
+  }
+}
