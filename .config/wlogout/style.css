@@ -1,55 +1,66 @@
-* {
-	background-image: none;
-	box-shadow: none;
-}
-
+/* Genel Pencere Ayarı - Arkaplanı Hafif Karartır */
 window {
-	background-color: rgba(12, 12, 12, 0.75);
+    background-color: rgba(12, 12, 12, 0.8);
+    font-family: "JetBrains Mono", sans-serif;
 }
 
+/* Butonların Genel Yapısı */
 button {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 15%;
-    background-color: rgba(255, 196, 247, 0.2);
-    margin:5px;
-    animation: gradient_f 10s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    border-radius: 80px;
-    border:30px;
-    outline-style: none;
-}
-
-button:hover {
-	background-color: transparent; 
-    color: #ff90f8;
     background-size: 25%;
-    margin: 15px;
-    border-radius: 80px;
-    outline-style: none;
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
+    background-color: #1e1e2e; /* Koyu Gri Buton Rengi */
+    border: 3px solid #1e1e2e;
+    border-radius: 20px; /* Kenarları Yuvarlat */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: all 0.3s ease; /* Yumuşak Geçiş */
+    color: white;
 }
 
-#lock {
-    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+/* Üzerine Gelince (Hover) Efekti */
+button:hover {
+    background-size: 35%; /* İkon Büyüsün */
+    border-radius: 50px; /* Tam Yuvarlak Olsun */
+    animation: gradient_f 20s ease-in infinite;
 }
 
-#logout {
-    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+/* Her Butona Özel Renkler (Hover Halinde) */
+
+#lock:hover {
+    background-color: #f9e2af; /* Sarı */
+    color: #1e1e2e;
 }
 
-#suspend {
-    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+#logout:hover {
+    background-color: #a6e3a1; /* Yeşil */
+    color: #1e1e2e;
 }
 
-#hibernate {
-    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+#suspend:hover {
+    background-color: #89b4fa; /* Mavi */
+    color: #1e1e2e;
 }
 
-#shutdown {
-    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+#hibernate:hover {
+    background-color: #cba6f7; /* Mor */
+    color: #1e1e2e;
 }
 
-#reboot {
-    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+#shutdown:hover {
+    background-color: #f38ba8; /* Kırmızı */
+    color: #1e1e2e;
 }
+
+#reboot:hover {
+    background-color: #fab387; /* Turuncu */
+    color: #1e1e2e;
+}
+
+/* İkon Tanımlamaları */
+#lock { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
+#logout { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
+#suspend { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
+#hibernate { background-image: image(url("/usr/share/wlogout/icons/hibernate.png")); }
+#shutdown { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }
+#reboot { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }
