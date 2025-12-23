@@ -1,0 +1,44 @@
+{
+	"include": [
+		"$HOME/.config/waybar/Modules",
+		"$HOME/.config/waybar/ModulesCustom",
+		"$HOME/.config/waybar/ModulesGroups"
+	],
+	"layer": "top",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "top",
+	"spacing": 3,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-top": 3,
+	"margin-left": 2,
+	"margin-right": 4,
+	"modules-left": [
+		"custom/playerctl",
+		"custom/separator#blank",
+		"custom/cava_mviz",
+		"custom/separator#dot-line",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"clock#3"
+	],
+	"modules-right": [
+		"tray",
+		"hyprland/language",
+		"custom/separator#dot-line",
+		"temperature",
+		"cpu",
+		"memory",
+		"battery",
+		"disk",
+		"power-profiles-daemon",
+		"idle_inhibitor",
+		"custom/separator#dot-line",
+		"group/audio",
+		"custom/separator#line",
+		"custom/hint",
+		"custom/swaync"
+	]
+}

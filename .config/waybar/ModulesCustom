@@ -70,5 +70,15 @@
 	"format": "  ",
 	"interval": "once",
 	"tooltip": false
+},
+"clock#3": {
+    "format": " {:%H:%M  -   %d %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "on-click": "gnome-calendar",
+	"on-click-right": "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center online-accounts",
+	"on-click-middle": "killall waybar; waybar &"
+
 }
 }
+
+

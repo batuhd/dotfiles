@@ -141,30 +141,31 @@
 },
 
 "pulseaudio": {
-	"format": "{icon} {volume}%",
-	"format-bluetooth": "{icon} 󰂰 {volume}%",
-	"format-muted": "󰖁",
-	"format-icons": {
-		"headphone": "",
-		"hands-free": "",
-		"headset": "",
-		"phone": "",
-		"portable": "",
-		"car": "",
-		"default": [
-			"", "", "󰕾",  ""
-		],
-		"ignored-sinks": [
-			"Easy Effects Sink"
-		]
-	},
-	"scroll-step": 5.0,
-	"on-click": "$HOME/.config/hypr/scripts/Volume.sh --toggle",
-	"on-click-right": "pavucontrol -t 3",
-	"on-scroll-up": "pamixer -i 5",
-	"on-scroll-down": "pamixer -d 5",
-	"tooltip-format": "{icon} {desc} | {volume}%",
-	"smooth-scrolling-threshold": 1
+    "max-volume": 150,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} 󰂰 {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [
+            "", "", "󰕾", ""
+        ]
+    },
+    "ignored-sinks": [
+        "Easy Effects Sink"
+    ],
+    "scroll-step": 5.0,
+    "on-click": "$HOME/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "on-scroll-up": "pamixer -i 5 --allow-boost",
+    "on-scroll-down": "pamixer -d 5",
+    "tooltip-format": "{icon} {desc} | {volume}%",
+    "smooth-scrolling-threshold": 1
 },
 
 "pulseaudio#microphone": {

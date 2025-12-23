@@ -1,0 +1,17 @@
+[general]
+# Bar sayısı (Waybar'da ne kadar yer kaplayacağı)
+bars = 12
+# Akıcılık
+framerate = 60
+
+[input]
+# Ses kaynağı (Otomatik algılasın)
+method = pulse
+source = auto
+
+[output]
+# Burası en kritik yer! Waybar'a ham veri gönderiyoruz.
+method = raw
+raw_target = /dev/stdout
+data_format = ascii
+ascii_max_range = 7
