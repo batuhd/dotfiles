@@ -161,8 +161,8 @@
 	"scroll-step": 5.0,
 	"on-click": "$HOME/.config/hypr/scripts/Volume.sh --toggle",
 	"on-click-right": "pavucontrol -t 3",
-	"on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --inc",
-	"on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --dec",
+	"on-scroll-up": "pamixer -i 5",
+	"on-scroll-down": "pamixer -d 5",
 	"tooltip-format": "{icon} {desc} | {volume}%",
 	"smooth-scrolling-threshold": 1
 },
